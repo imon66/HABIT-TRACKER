@@ -1,5 +1,4 @@
 import CountdownTimer from './CountdownTimer'
-import { WEBSITE_CONFIG, handleDownload } from '../config/constants'
 
 const PricingSection = () => {
   return (
