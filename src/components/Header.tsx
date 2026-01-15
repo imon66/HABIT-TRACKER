@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { handleDownload } from '../config/constants'
+import { handleDownload, WEBSITE_CONFIG } from '../config/constants'
 
 const Header = () => {
   const [timerVisible, setTimerVisible] = useState(true)
@@ -34,12 +34,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Left side - Brand name */}
-          <div>
-            <h1 className="text-lg md:text-xl font-bold">
-              <span className="text-gray-800">Ultimate Habit Tracker</span>{' '}
-              <span className="text-blue-600">Bundle</span>
-            </h1>
+          {/* Left side - Logo only */}
+          <div className="flex items-center -ml-20">
+            <img
+              src="/images/logo.png"
+              alt={`${WEBSITE_CONFIG.COMPANY_NAME} Logo`}
+              className="h-10 w-96 md:h-12 md:w-120 object-contain"
+            />
           </div>
           
           {/* Right side - Buy Now button */}

@@ -282,10 +282,10 @@ const HeroSection = () => {
           
           {/* Content Section */}
           <div className="w-full space-y-4 md:space-y-6 text-center lg:text-left order-1 lg:order-1">
-            {/* New 2025 Edition Badge */}
+            {/* New 2026 Edition Badge */}
             <div className="flex justify-center lg:justify-start">
               <span className="bg-gradient-to-r from-white/90 via-blue-50/70 to-purple-50/50 backdrop-blur-2xl border border-white/40 shadow-2xl text-blue-800 px-4 md:px-6 py-2 rounded-full text-sm font-bold tracking-wide">
-                New 2025 Edition
+                New 2026 Edition
               </span>
             </div>
 
@@ -296,20 +296,20 @@ const HeroSection = () => {
                 <span className="block bg-gradient-to-r from-cyan-300 via-violet-400 to-rose-300 bg-clip-text text-transparent text-4xl md:text-6xl lg:text-8xl drop-shadow-2xl animate-pulse">
                   21 Days with Our
                 </span>
-                <span className="block text-white/95 drop-shadow-lg text-xl md:text-2xl lg:text-3xl">Ultimate Habit Tracker Bundle</span>
+                <span className="block text-white/95 drop-shadow-lg text-2xl md:text-4xl lg:text-6xl">Ultimate Habit Tracker Bundle</span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="text-sm md:text-base lg:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 drop-shadow-md">
-              Stop struggling with scattered habits. Get {WEBSITE_CONFIG.TOTAL_TRACKERS} proven tracking systems that have helped {WEBSITE_CONFIG.TOTAL_USERS} people build life-changing routines. Ready-to-use Google Sheets templates with built-in psychology triggers for guaranteed success.
+              Stop struggling with scattered habits. Get {WEBSITE_CONFIG.TOTAL_TRACKERS} effective tracking systems designed to help you build consistent routines. Ready-to-use Google Sheets templates with built-in productivity features to support your habit-building journey.
             </p>
 
-            {/* CTA Button - Fixed Width */}
+            {/* CTA Button - Fixed Width with Heartbeat Animation */}
             <div className="flex justify-center lg:justify-start">
               <button
                 onClick={handleDownload}
-                className="w-full max-w-md bg-gradient-to-r from-purple-900 via-purple-700 to-white hover:from-purple-800 hover:via-purple-600 hover:to-gray-100 backdrop-blur-3xl border-2 border-white/60 shadow-2xl hover:shadow-[0_35px_80px_rgba(88,_28,_135,_0.8)] text-white font-bold text-base md:text-lg px-6 md:px-8 py-4 md:py-5 rounded-3xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center space-x-3 hover:border-purple-300/80 relative overflow-hidden group"
+                className="w-full max-w-md bg-gradient-to-r from-purple-900 via-purple-700 to-white hover:from-purple-800 hover:via-purple-600 hover:to-gray-100 backdrop-blur-3xl border-2 border-white/60 shadow-2xl hover:shadow-[0_35px_80px_rgba(88,_28,_135,_0.8)] text-white font-bold text-base md:text-lg px-6 md:px-8 py-4 md:py-5 rounded-3xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center space-x-3 hover:border-purple-300/80 relative overflow-hidden group animate-heartbeat"
               >
                 <span>🚀</span>
                 <span>Get All 5 Trackers for ₹49</span>

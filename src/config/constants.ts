@@ -2,6 +2,9 @@
 // Update these values from a single location to change across the entire website
 
 export const WEBSITE_CONFIG = {
+  // Company Information
+  COMPANY_NAME: 'LearnNWork Academy',
+  
   // Product URLs
   DOWNLOAD_URL: 'https://docs.google.com/spreadsheets/d/12sdj0O1vhaqq-CgEH1x-_6ZLdP-9J_-TTOqTKTDyb8M/copy',
   

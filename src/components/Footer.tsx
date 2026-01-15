@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WEBSITE_CONFIG } from '../config/constants';
 
 const Footer = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -98,6 +99,12 @@ const Footer = () => {
             >
               Refund Policy
             </button>
+            <button
+              onClick={() => openModal('delivery')}
+              className="text-gray-600 hover:text-gray-800 transition-colors text-sm font-medium cursor-pointer"
+            >
+              Delivery Policy
+            </button>
           </div>
 
           {/* Digital Product Notice - Minimal Glassmorphism */}
@@ -114,6 +121,13 @@ const Footer = () => {
                 <span className="text-gray-600 text-sm">🔒</span>
               </div>
             </div>
+          </div>
+
+          {/* Company Copyright */}
+          <div className="text-center mb-4">
+            <p className="text-gray-600 text-sm font-medium">
+              © 2026 <span className="font-semibold text-gray-800">{WEBSITE_CONFIG.COMPANY_NAME}</span>. All rights reserved.
+            </p>
           </div>
 
           {/* Legal Disclaimer */}
@@ -138,43 +152,85 @@ const Footer = () => {
           <section>
             <h3 className="text-xl font-bold text-gray-900 mb-4">1. Introduction</h3>
             <p className="text-gray-700 leading-relaxed">
-              Welcome to our platform. We respect your privacy and are committed to protecting your personal data.
-              This privacy policy will inform you as to how we look after your personal data when you visit our website
-              and tell you about your privacy rights and how the law protects you.
+              LearnNWork Academy ("we," "our," or "us") respects your privacy and is committed to protecting your personal data.
+              This privacy policy explains how we collect, use, and protect your information when you purchase our digital
+              Google Sheets habit tracker templates and use our website.
             </p>
           </section>
 
           <section>
             <h3 className="text-xl font-bold text-gray-900 mb-4">2. Data We Collect</h3>
-            <p className="text-gray-700 leading-relaxed">
-              We may collect, use, store and transfer different kinds of personal data about you which we have
-              grouped together follows: Identity Data, Contact Data, Technical Data, and Usage Data.
-            </p>
+            <div className="text-gray-700 leading-relaxed space-y-3">
+              <p><strong>Personal Information:</strong> Name, email address, payment information (processed securely by our payment processor)</p>
+              <p><strong>Technical Data:</strong> IP address, browser type, device information, cookies</p>
+              <p><strong>Usage Data:</strong> Pages visited, time spent on site, download activity</p>
+              <p><strong>Payment Data:</strong> Transaction details, purchase history (payment card details are processed by secure third-party processors and not stored by us)</p>
+            </div>
           </section>
 
           <section>
             <h3 className="text-xl font-bold text-gray-900 mb-4">3. How We Use Your Data</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p>• Process your orders and deliver digital products</p>
+              <p>• Send order confirmations and download links</p>
+              <p>• Provide customer support</p>
+              <p>• Improve our website and services</p>
+              <p>• Comply with legal obligations</p>
+              <p>• Send marketing communications (with your consent)</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">4. Cookies Policy</h3>
             <p className="text-gray-700 leading-relaxed">
-              We will only use your personal data when the law allows us to. Most commonly, we will use your personal
-              data in the following circumstances: Where we need to perform the contract we are about to enter into or
-              have entered into with you; Where it is necessary for our legitimate interests and your interests and
-              fundamental rights do not override those interests; Where we need to comply with a legal or regulatory
-              obligation.
+              We use essential cookies for website functionality and analytics cookies to understand how you use our site.
+              You can control cookies through your browser settings. Disabling cookies may affect website functionality.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">4. Data Security</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">5. Data Retention</h3>
             <p className="text-gray-700 leading-relaxed">
-              We have put in place appropriate security measures to prevent your personal data from being
-              accidentally lost, used or accessed in an unauthorized way, altered or disclosed.
+              We retain your personal data for as long as necessary to fulfill the purposes outlined in this policy,
+              typically 7 years for transaction records as required by law, or until you request deletion.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">5. Contact Us</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">6. Your Rights (GDPR)</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p>• Right to access your personal data</p>
+              <p>• Right to rectify inaccurate data</p>
+              <p>• Right to erase your data</p>
+              <p>• Right to restrict processing</p>
+              <p>• Right to data portability</p>
+              <p>• Right to object to processing</p>
+              <p>To exercise these rights, contact us at <strong>help.learnnwork@gmail.com</strong></p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">7. Data Security</h3>
             <p className="text-gray-700 leading-relaxed">
-              If you have any questions about this privacy policy or our privacy practices, please contact us.
+              We implement appropriate technical and organizational security measures to protect your personal data
+              against unauthorized access, alteration, disclosure, or destruction. Payment processing is handled by
+              PCI DSS compliant third-party processors.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">8. Third-Party Services</h3>
+            <p className="text-gray-700 leading-relaxed">
+              We use Google Sheets for product delivery, payment processors for transactions, and analytics services.
+              These services have their own privacy policies and may collect data independently.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">9. Contact Us</h3>
+            <p className="text-gray-700 leading-relaxed">
+              For privacy-related questions or to exercise your rights, contact us at <strong>help.learnnwork@gmail.com</strong> or
+              write to us at our registered business address.
             </p>
           </section>
         </div>
@@ -190,35 +246,71 @@ const Footer = () => {
           <section>
             <h3 className="text-xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h3>
             <p className="text-gray-700 leading-relaxed">
-              By accessing or using our website, you agree to be bound by these Terms and Conditions. If you disagree
-              with any part of the terms, you may not access the service.
+              By purchasing our digital habit tracker templates or using our website, you agree to these Terms and Conditions.
+              These terms govern your purchase and use of our Google Sheets templates and related services provided by LearnNWork Academy.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">2. Intellectual Property Rights</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">2. Digital Products & Delivery</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Product Description:</strong> We sell digital Google Sheets habit tracker templates for personal productivity.</p>
+              <p><strong>Delivery:</strong> Products are delivered instantly via Google Sheets link after successful payment.</p>
+              <p><strong>Access:</strong> You receive lifetime access to download and use the templates for personal use.</p>
+              <p><strong>System Requirements:</strong> Google account and internet access required.</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">3. Payment Terms</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Price:</strong> ₹49 (Indian Rupees) one-time payment</p>
+              <p><strong>Payment Methods:</strong> Credit/debit cards, UPI, net banking via secure payment processors</p>
+              <p><strong>Currency:</strong> All prices in Indian Rupees (INR)</p>
+              <p><strong>Taxes:</strong> Prices include applicable taxes</p>
+              <p><strong>Payment Processing:</strong> Handled by third-party secure payment processors</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">4. License & Usage Rights</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Personal License:</strong> Templates are for personal use only</p>
+              <p><strong>Restrictions:</strong> You may not resell, redistribute, or share the templates</p>
+              <p><strong>Modifications:</strong> You may customize templates for personal use</p>
+              <p><strong>Copyright:</strong> All templates remain property of LearnNWork Academy</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">5. Refund Policy</h3>
             <p className="text-gray-700 leading-relaxed">
-              Other than the content you own, under these Terms, we and/or our licensors own all the
-              intellectual property rights and materials contained in this Website.
+              Due to the instant digital nature of our products, all sales are final once the download link is accessed.
+              Refunds may be considered within 24 hours of purchase if technical issues prevent access to the product.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">3. Restrictions</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">6. Disclaimer & Limitations</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p>• Templates are provided "as is" without warranties</p>
+              <p>• Results depend on individual usage and commitment</p>
+              <p>• We are not liable for any indirect or consequential damages</p>
+              <p>• Maximum liability limited to purchase price</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">7. Governing Law</h3>
             <p className="text-gray-700 leading-relaxed">
-              You are specifically restricted from all of the following: publishing any Website material in any other
-              media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing
-              and/or showing any Website material.
+              These terms are governed by Indian law. Any disputes will be resolved through Indian courts or arbitration as per Indian Arbitration Act.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">4. Limitation of Liability</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">8. Contact Information</h3>
             <p className="text-gray-700 leading-relaxed">
-              In no event shall we, nor any of our officers, directors and employees, be held liable for anything
-              arising out of or in any way connected with your use of this Website whether such liability is under
-              contract. We, including our officers, directors and employees shall not be held liable for any
-              indirect, consequential or special liability arising out of or in any way related to your use of this Website.
+              For questions about these terms, contact us at <strong>help.learnnwork@gmail.com</strong>
             </p>
           </section>
         </div>
@@ -262,7 +354,7 @@ const Footer = () => {
         <div className="space-y-8">
           <section>
             <p className="text-gray-700 leading-relaxed mb-8">
-              Welcome to our platform, your number one source for productivity templates. We're dedicated to
+              Welcome to <strong>LearnNWork Academy</strong>, your number one source for productivity templates and habit tracking solutions. We're dedicated to
               providing you the very best of Excel and Google Sheets templates, with an emphasis on usability,
               aesthetics, and automation.
             </p>
@@ -271,16 +363,16 @@ const Footer = () => {
           <section>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
             <p className="text-gray-700 leading-relaxed">
-              Our mission is to help individuals and businesses organize their data and improve their productivity
+              At LearnNWork Academy, our mission is to help individuals and businesses organize their data and improve their productivity
               through intuitive and powerful spreadsheet tools. We believe that organization is the key to success, and
               our tools are designed to make that process as seamless as possible.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose LearnNWork Academy?</h3>
             <p className="text-gray-700 leading-relaxed">
-              We understand the frustration of complex spreadsheets. That's why our team focuses on creating user-friendly,
+              We understand the frustration of complex spreadsheets. That's why our team at LearnNWork Academy focuses on creating user-friendly,
               automated solutions that do the heavy lifting for you. Our templates are designed to be accessible to
               everyone, regardless of their Excel expertise.
             </p>
@@ -298,20 +390,39 @@ const Footer = () => {
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Get in Touch</h3>
-            <p className="text-gray-700 mb-6">
-              You can contact us via email at:
-            </p>
-            
-            <div className="p-6 mb-6">
-              <p className="text-lg font-semibold text-gray-900">
-                <span className="text-gray-600">Email:</span> <span className="underline">learnnwork@gmail.com</span>
-              </p>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Business Information</h3>
+            <div className="text-gray-700 leading-relaxed space-y-4">
+              <div>
+                <p><strong>Company Name:</strong> LearnNWork Academy</p>
+                <p><strong>Business Type:</strong> Digital Education & Productivity Solutions</p>
+              </div>
+              
+              <div>
+                <p><strong>Registered Address:</strong></p>
+                <p>823 Sarat Chatterjee Road</p>
+                <p>Kolkata, West Bengal 711104</p>
+                <p>India</p>
+              </div>
+              
+              <div>
+                <p><strong>Contact Information:</strong></p>
+                <p><strong>Email:</strong> <span className="underline"><strong>help.learnnwork@gmail.com</strong></span></p>
+                <p><strong>Phone:</strong> +91-8637043507</p>
+                <p><strong>Business Hours:</strong> Monday to Friday, 9 AM to 6 PM IST</p>
+              </div>
+              
             </div>
-            
-            <p className="text-gray-700">
-              We aim to respond to all inquiries within 24 hours.
-            </p>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Support</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>For Product Support:</strong> <strong>help.learnnwork@gmail.com</strong></p>
+              <p><strong>For Technical Issues:</strong> <strong>help.learnnwork@gmail.com</strong></p>
+              <p><strong>For Refund Requests:</strong> <strong>help.learnnwork@gmail.com</strong></p>
+              <p><strong>Response Time:</strong> Within 24 hours</p>
+              <p><strong>Emergency Support:</strong> +91-8637043507 (Business hours only)</p>
+            </div>
           </section>
         </div>
       </Modal>
@@ -321,33 +432,129 @@ const Footer = () => {
         <div className="space-y-8">
           <section>
             <p className="text-gray-700 mb-8">
-              Thank you for shopping with us.
+              This refund policy applies to all digital Google Sheets habit tracker templates sold by LearnNWork Academy.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Products</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Product Refund Policy</h3>
+            <div className="text-gray-700 leading-relaxed space-y-3">
+              <p><strong>General Policy:</strong> Due to the instant digital delivery nature of our Google Sheets templates, all sales are final once you access the download link.</p>
+              <p><strong>Exception:</strong> Refunds may be considered within 24 hours of purchase only if:</p>
+              <ul className="list-disc ml-6 space-y-1">
+                <li>Technical issues prevent you from accessing the product</li>
+                <li>The product is significantly different from what was described</li>
+                <li>You accidentally made a duplicate purchase</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Refund Process</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Step 1:</strong> Contact us at <strong>help.learnnwork@gmail.com</strong> within 24 hours</p>
+              <p><strong>Step 2:</strong> Provide your order details and reason for refund</p>
+              <p><strong>Step 3:</strong> We will review and respond within 48 hours</p>
+              <p><strong>Step 4:</strong> If approved, refund will be processed within 5-7 business days</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">No Refund Conditions</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p>• After accessing/downloading the Google Sheets templates</p>
+              <p>• Change of mind or buyer's remorse</p>
+              <p>• Lack of technical skills to use Google Sheets</p>
+              <p>• Requests made after 24 hours of purchase</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Support</h3>
             <p className="text-gray-700 leading-relaxed">
-              We issue refunds for digital products within 7 days of the original purchase of the product, provided the
-              product has not been downloaded. However, due to the nature of digital goods, we generally recommend
-              contacting our team for assistance if you experience any issues receiving or downloading our products.
+              Before requesting a refund, please contact our support team at <strong>help.learnnwork@gmail.com</strong>.
+              We're committed to helping you get the most value from your purchase and can provide technical assistance.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">No Refunds on Downloaded Items</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
             <p className="text-gray-700 leading-relaxed">
-              Since your purchase is a digital product, it is deemed "used" after download or opening, and all
-              purchases made on our platform are non-refundable or exchangeable. Since the products
-              made available here are intangible, there is a strict no refund policy.
+              For refund requests or questions: <strong>help.learnnwork@gmail.com</strong><br/>
+              Response time: Within 48 hours
+            </p>
+          </section>
+        </div>
+      </Modal>
+
+      {/* Delivery Policy Modal */}
+      <Modal isOpen={activeModal === 'delivery'} onClose={closeModal} title="Delivery Policy">
+        <div className="space-y-8">
+          <section>
+            <p className="text-gray-700 mb-8">
+              This delivery policy explains how we deliver our digital Google Sheets habit tracker templates to customers.
             </p>
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Product Delivery</h3>
+            <div className="text-gray-700 leading-relaxed space-y-3">
+              <p><strong>Product Type:</strong> Digital Google Sheets templates (no physical shipping required)</p>
+              <p><strong>Delivery Method:</strong> Instant access via Google Sheets link sent to your email</p>
+              <p><strong>Delivery Time:</strong> Immediate after successful payment confirmation</p>
+              <p><strong>Access Duration:</strong> Lifetime access to download and use templates</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Delivery Process</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Step 1:</strong> Complete payment through our secure payment gateway</p>
+              <p><strong>Step 2:</strong> Receive order confirmation email immediately</p>
+              <p><strong>Step 3:</strong> Access Google Sheets link provided in confirmation email</p>
+              <p><strong>Step 4:</strong> Make a copy to your Google Drive for personal use</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">System Requirements</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p>• Google account (free Gmail account)</p>
+              <p>• Internet connection for initial access</p>
+              <p>• Web browser or Google Sheets mobile app</p>
+              <p>• No special software installation required</p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Delivery Issues</h3>
+            <div className="text-gray-700 leading-relaxed space-y-3">
+              <p><strong>If you don't receive access within 10 minutes:</strong></p>
+              <ul className="list-disc ml-6 space-y-1">
+                <li>Check your spam/junk email folder</li>
+                <li>Verify the email address used during purchase</li>
+                <li>Contact our support team at <strong>help.learnnwork@gmail.com</strong></li>
+              </ul>
+              <p><strong>We guarantee delivery within 24 hours or full refund.</strong></p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Geographic Availability</h3>
             <p className="text-gray-700 leading-relaxed">
-              If you have any questions about our Returns and Refunds Policy, please contact us.
+              Our digital products are available worldwide. No geographic restrictions apply as products
+              are delivered digitally via Google Sheets platform.
             </p>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Support</h3>
+            <div className="text-gray-700 leading-relaxed space-y-2">
+              <p><strong>Email:</strong> <strong>help.learnnwork@gmail.com</strong></p>
+              <p><strong>Response Time:</strong> Within 24 hours</p>
+              <p><strong>Support Hours:</strong> Monday to Friday, 9 AM to 6 PM IST</p>
+              <p><strong>Technical Help:</strong> Available for Google Sheets access issues</p>
+            </div>
           </section>
         </div>
       </Modal>

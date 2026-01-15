@@ -512,3 +512,26 @@ div[style*="position: fixed"][style*="bottom: 0px"] {
     background: rgba(255, 0, 0, 0.5) !important;
   }
 }
+
+/* Heartbeat animation for buttons */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.05);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
