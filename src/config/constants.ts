@@ -1,20 +1,40 @@
+// ===== WEBSITE CONFIGURATION =====
 export const WEBSITE_CONFIG = {
   COMPANY_NAME: 'LearnNWork Academy',
-  DOWNLOAD_URL: 'https://docs.google.com/spreadsheets/d/12sdj0O1vhaqq-CgEH1x-_6ZLdP-9J_-TTOqTKTDyb8M/copy',
+  DOWNLOAD_URL: 'https://docs.google.com/spreadsheets/d/1EYVN-Z9HtqdQ_1ws_Yyu6nlW11YdaTly8QjsdRZfUr4/copy',
   TOTAL_USERS: '1,000+',
   TOTAL_TRACKERS: 5,
   PRODUCT_PRICE: 49,
   PRODUCT_NAME: 'Ultimate Habit Tracker Bundle',
   PRODUCT_DESCRIPTION: '5 Complete Google Sheets Habit Trackers with Analytics Dashboard'
+} as const;
+
+// ===== RAZORPAY CONFIGURATION =====
+const RAZORPAY_KEYS = {
+  TEST: {
+    KEY_ID: 'rzp_test_S4W8DPAx15EAtJ',
+    KEY_SECRET: 'PtgafVq4aWeJ2aRJTnms8Mk5'
+  },
+  PRODUCTION: {
+    KEY_ID: 'rzp_live_S4W6lnCEzmiN0S',
+    KEY_SECRET: 'h9qk07YI1Kjhgp6eMBS5g4aC'
+  }
+} as const;
+
+// Toggle between test and production mode
+const USE_TEST_MODE = false;
+
+const getCurrentKeys = () => {
+  return USE_TEST_MODE ? RAZORPAY_KEYS.TEST : RAZORPAY_KEYS.PRODUCTION;
 };
 
 export const RAZORPAY_CONFIG = {
-  KEY_ID: 'rzp_test_S4W8DPAx15EAtJ',
-  KEY_SECRET: 'PtgafVq4aWeJ2aRJTnms8Mk5',
+  KEY_ID: getCurrentKeys().KEY_ID,
+  KEY_SECRET: getCurrentKeys().KEY_SECRET,
   CURRENCY: 'INR',
   COMPANY_NAME: WEBSITE_CONFIG.COMPANY_NAME,
   COMPANY_LOGO: '/images/logo.png',
-  TEST_MODE: true,
+  TEST_MODE: USE_TEST_MODE,
   PAYMENT_METHODS: {
     card: true,
     netbanking: true,
@@ -22,8 +42,9 @@ export const RAZORPAY_CONFIG = {
     upi: true,
     paylater: false
   }
-};
+} as const;
 
+// ===== TYPE DEFINITIONS =====
 export type OrderStatus = 'pending' | 'processing' | 'completed' | 'failed' | 'cancelled';
 
 export interface CustomerInfo {
@@ -44,7 +65,8 @@ export interface OrderInfo {
   razorpaySignature?: string;
 }
 
-export const handleDownload = () => {
+// ===== UTILITY FUNCTIONS =====
+export const handleDownload = (): void => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'download', {
       event_category: 'engagement',
@@ -54,7 +76,7 @@ export const handleDownload = () => {
   window.open(WEBSITE_CONFIG.DOWNLOAD_URL, '_blank');
 };
 
-export const handleCheckout = (navigate?: (path: string) => void) => {
+export const handleCheckout = (navigate?: (path: string) => void): void => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'begin_checkout', {
       event_category: 'ecommerce',
@@ -70,7 +92,7 @@ export const handleCheckout = (navigate?: (path: string) => void) => {
   }
 };
 
-export const handleBuyNow = (navigate?: (path: string) => void) => handleCheckout(navigate);
+export const handleBuyNow = (navigate?: (path: string) => void): void => handleCheckout(navigate);
 
 export const generateOrderId = (): string => {
   const timestamp = Date.now();
@@ -85,6 +107,7 @@ export const formatCurrency = (amount: number, currency: string = RAZORPAY_CONFI
   return `${currency} ${amount}`;
 };
 
+// ===== VALIDATION FUNCTIONS =====
 export const validateEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);

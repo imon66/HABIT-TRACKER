@@ -47,13 +47,11 @@ const MobileStickyFooter = () => {
       // Detect any scroll (up or down)
       if (currentScrollY !== lastScrollY) {
         scrollCount++
-        console.log(`Scroll detected! Count: ${scrollCount}`)
         
         // Show footer after 2 scroll movements (up or down)
         if (scrollCount >= 2 && !isFooterShown) {
           setIsVisible(true)
           isFooterShown = true
-          console.log('Footer SHOWN!')
         }
       }
       

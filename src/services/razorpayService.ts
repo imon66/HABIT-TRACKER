@@ -1,4 +1,4 @@
-import { RAZORPAY_CONFIG, WEBSITE_CONFIG, generateOrderId } from '../config/constants';
+import { RAZORPAY_CONFIG, WEBSITE_CONFIG } from '../config/constants';
 import type { CustomerInfo, OrderInfo } from '../config/constants';
 
 declare global {

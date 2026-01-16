@@ -107,21 +107,6 @@ const Footer = () => {
             </button>
           </div>
 
-          {/* Digital Product Notice - Minimal Glassmorphism */}
-          <div className="text-center mb-6">
-            <div className="inline-block bg-gradient-to-r from-white/90 via-blue-50/60 to-purple-50/40 backdrop-blur-xl border border-white/30 shadow-lg rounded-xl px-6 py-3 relative overflow-hidden">
-              {/* Subtle glassmorphism overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/10 via-transparent to-purple-50/10"></div>
-              
-              <div className="relative z-10 flex items-center justify-center space-x-2">
-                <span className="text-gray-600 text-sm">🔒</span>
-                <p className="bg-gradient-to-r from-gray-700 via-blue-700 to-purple-700 bg-clip-text text-transparent font-semibold text-sm tracking-wide">
-                  Digital Product • No Refunds Policy
-                </p>
-                <span className="text-gray-600 text-sm">🔒</span>
-              </div>
-            </div>
-          </div>
 
           {/* Company Copyright */}
           <div className="text-center mb-4">
@@ -355,7 +340,7 @@ const Footer = () => {
           <section>
             <p className="text-gray-700 leading-relaxed mb-8">
               Welcome to <strong>LearnNWork Academy</strong>, your number one source for productivity templates and habit tracking solutions. We're dedicated to
-              providing you the very best of Excel and Google Sheets templates, with an emphasis on usability,
+              providing you the very best of Google Sheets templates, with an emphasis on usability,
               aesthetics, and automation.
             </p>
           </section>
@@ -374,7 +359,7 @@ const Footer = () => {
             <p className="text-gray-700 leading-relaxed">
               We understand the frustration of complex spreadsheets. That's why our team at LearnNWork Academy focuses on creating user-friendly,
               automated solutions that do the heavy lifting for you. Our templates are designed to be accessible to
-              everyone, regardless of their Excel expertise.
+              everyone, regardless of their Google Sheets expertise.
             </p>
           </section>
         </div>
@@ -500,7 +485,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Product Delivery</h3>
             <div className="text-gray-700 leading-relaxed space-y-3">
               <p><strong>Product Type:</strong> Digital Google Sheets templates (no physical shipping required)</p>
-              <p><strong>Delivery Method:</strong> Instant access via Google Sheets link sent to your email</p>
+              <p><strong>Delivery Method:</strong> Instant access via Google Sheets link through download button after payment</p>
               <p><strong>Delivery Time:</strong> Immediate after successful payment confirmation</p>
               <p><strong>Access Duration:</strong> Lifetime access to download and use templates</p>
             </div>
@@ -510,9 +495,9 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-4">Delivery Process</h3>
             <div className="text-gray-700 leading-relaxed space-y-2">
               <p><strong>Step 1:</strong> Complete payment through our secure payment gateway</p>
-              <p><strong>Step 2:</strong> Receive order confirmation email immediately</p>
-              <p><strong>Step 3:</strong> Access Google Sheets link provided in confirmation email</p>
-              <p><strong>Step 4:</strong> Make a copy to your Google Drive for personal use</p>
+              <p><strong>Step 2:</strong> Access download button on success page</p>
+              <p><strong>Step 3:</strong> Click the button to get Google Sheets link</p>
+              <p><strong>Step 4:</strong> Copy the template to your own Google account for personal use</p>
             </div>
           </section>
 

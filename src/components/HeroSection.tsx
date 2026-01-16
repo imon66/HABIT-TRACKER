@@ -311,7 +311,7 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-start">
               <button
                 onClick={() => handleBuyNow(navigate)}
-                className="w-full max-w-md bg-gradient-to-r from-purple-900 via-purple-700 to-white hover:from-purple-800 hover:via-purple-600 hover:to-gray-100 backdrop-blur-3xl border-2 border-white/60 shadow-2xl hover:shadow-[0_35px_80px_rgba(88,_28,_135,_0.8)] text-white font-bold text-base md:text-lg px-6 md:px-8 py-4 md:py-5 rounded-3xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center space-x-3 hover:border-purple-300/80 relative overflow-hidden group animate-heartbeat"
+                className="w-full max-w-md bg-gradient-to-r from-purple-900 via-purple-700 to-white hover:from-purple-800 hover:via-purple-600 hover:to-gray-100 backdrop-blur-3xl border-2 border-white/60 shadow-2xl hover:shadow-[0_35px_80px_rgba(88,_28,_135,_0.8)] text-white font-bold text-base md:text-lg px-6 md:px-8 py-4 md:py-5 rounded-3xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center space-x-3 hover:border-purple-300/80 relative overflow-hidden group"
               >
                 <span>🚀</span>
                 <span>Get All 5 Trackers for ₹49</span>
@@ -320,7 +320,7 @@ const HeroSection = () => {
             </div>
 
             {/* Countdown Timer - Enhanced Glassmorphism Style */}
-            <div className="bg-gradient-to-br from-white/20 via-blue-50/15 to-purple-50/10 backdrop-blur-3xl border-2 border-white/40 shadow-2xl hover:shadow-[0_25px_50px_rgba(255,_255,_255,_0.2)] rounded-2xl p-4 md:p-6 w-full max-w-md mx-auto lg:mx-0 transition-all duration-500 relative overflow-hidden group">
+            <div className="bg-gradient-to-br from-white/20 via-blue-50/15 to-purple-50/10 backdrop-blur-3xl border-2 border-white/40 shadow-2xl hover:shadow-[0_25px_50px_rgba(255,_255,_255,_0.2)] rounded-2xl p-3 md:p-4 w-full max-w-md mx-auto lg:mx-0 transition-all duration-500 relative overflow-hidden group" style={{ height: '70%' }}>
               {/* Enhanced glassmorphism overlays */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-blue-100/5 to-purple-100/8 animate-pulse"></div>
               <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-white/5 to-transparent"></div>
@@ -332,33 +332,33 @@ const HeroSection = () => {
               <div className="absolute bottom-2 left-3 w-8 h-8 bg-gradient-to-r from-purple-200/15 to-white/10 rounded-full blur-lg animate-pulse delay-700"></div>
               <div className="absolute top-1/2 right-1 w-4 h-4 bg-white/15 rounded-full blur-md animate-bounce delay-1000"></div>
               
-              <div className="relative z-10 space-y-3">
-                <div className="text-gray-800 text-center text-base md:text-lg font-bold tracking-wide drop-shadow-sm">
+              <div className="relative z-10 space-y-2">
+                <div className="text-gray-800 text-center text-sm md:text-base font-bold tracking-wide drop-shadow-sm">
                   Price Increases in...
                 </div>
-                <div className="flex items-center justify-center space-x-2 md:space-x-3">
-                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-xl p-3 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[60px] group-hover:scale-105">
-                    <div className="text-2xl md:text-3xl font-black text-gray-800 drop-shadow-md">00</div>
-                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase mt-1">Days</div>
+                <div className="flex items-center justify-center space-x-1 md:space-x-2">
+                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-lg p-2 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[50px] group-hover:scale-105">
+                    <div className="text-xl md:text-2xl font-black text-gray-800 drop-shadow-md">00</div>
+                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase">Days</div>
                   </div>
-                  <div className="text-xl md:text-2xl text-gray-600 font-bold">:</div>
-                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-xl p-3 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[60px] group-hover:scale-105">
-                    <div className="text-2xl md:text-3xl font-black text-gray-800 drop-shadow-md">00</div>
-                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase mt-1">Hours</div>
+                  <div className="text-lg md:text-xl text-gray-600 font-bold">:</div>
+                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-lg p-2 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[50px] group-hover:scale-105">
+                    <div className="text-xl md:text-2xl font-black text-gray-800 drop-shadow-md">00</div>
+                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase">Hours</div>
                   </div>
-                  <div className="text-xl md:text-2xl text-gray-600 font-bold">:</div>
-                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-xl p-3 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[60px] group-hover:scale-105">
-                    <div className="text-2xl md:text-3xl font-black text-gray-800 drop-shadow-md">{mins.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase mt-1">Min</div>
+                  <div className="text-lg md:text-xl text-gray-600 font-bold">:</div>
+                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-lg p-2 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[50px] group-hover:scale-105">
+                    <div className="text-xl md:text-2xl font-black text-gray-800 drop-shadow-md">{mins.toString().padStart(2, '0')}</div>
+                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase">Min</div>
                   </div>
-                  <div className="text-xl md:text-2xl text-gray-600 font-bold">:</div>
-                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-xl p-3 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[60px] group-hover:scale-105">
-                    <div className="text-2xl md:text-3xl font-black text-gray-800 drop-shadow-md">{secs.toString().padStart(2, '0')}</div>
-                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase mt-1">Sec</div>
+                  <div className="text-lg md:text-xl text-gray-600 font-bold">:</div>
+                  <div className="text-center bg-gradient-to-br from-white/30 via-blue-50/20 to-white/15 backdrop-blur-xl rounded-lg p-2 border-2 border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 min-w-[50px] group-hover:scale-105">
+                    <div className="text-xl md:text-2xl font-black text-gray-800 drop-shadow-md">{secs.toString().padStart(2, '0')}</div>
+                    <div className="text-xs text-gray-600 font-bold tracking-wider uppercase">Sec</div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <p className="text-black font-bold text-sm md:text-base flex items-center justify-center drop-shadow-sm">
+                  <p className="text-black font-bold text-xs md:text-sm flex items-center justify-center drop-shadow-sm">
                     <span>Special Launch Price Ending Soon!</span>
                   </p>
                 </div>
