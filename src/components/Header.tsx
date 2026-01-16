@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { handleBuyNow, WEBSITE_CONFIG } from '../config/constants'
 
 const Header = () => {
+  const navigate = useNavigate()
   const [timerVisible, setTimerVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -46,7 +48,7 @@ const Header = () => {
           {/* Right side - Buy Now button */}
           <div>
             <button
-              onClick={handleBuyNow}
+              onClick={() => handleBuyNow(navigate)}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full text-sm transition-all duration-200 whitespace-nowrap hover:scale-105 shadow-md hover:shadow-lg"
             >
               Buy Now ₹49

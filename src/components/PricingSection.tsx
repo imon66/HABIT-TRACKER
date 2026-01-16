@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import { handleBuyNow } from '../config/constants'
 
 const PricingSection = () => {
+  const navigate = useNavigate()
   return (
     <div className="pt-16 pb-0 relative z-10">
       <div className="container-max relative z-10">
@@ -83,7 +85,7 @@ const PricingSection = () => {
                 {/* Professional CTA Button */}
                 <div className="mb-6 sm:mb-8">
                   <button
-                    onClick={handleBuyNow}
+                    onClick={() => handleBuyNow(navigate)}
                     className="w-full bg-gradient-to-br from-blue-600/95 via-purple-700/95 to-pink-600/95 backdrop-blur-2xl border border-white/30 shadow-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] text-white font-bold text-base sm:text-lg md:text-xl px-6 sm:px-8 py-4 sm:py-5 md:py-6 rounded-2xl transform hover:scale-105 transition-all duration-300 hover:border-white/50"
                   >
                     <span className="flex items-center justify-center gap-2">

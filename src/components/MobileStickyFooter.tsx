@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { handleBuyNow } from '../config/constants'
 
 const MobileStickyFooter = () => {
+  const navigate = useNavigate()
   const [isVisible, setIsVisible] = useState(false)
   const [timeLeft, setTimeLeft] = useState(179) // Start with 2:59 (179 seconds)
 
@@ -133,7 +135,7 @@ const MobileStickyFooter = () => {
           {/* Right side - Enhanced Buy Now button */}
           <div className="flex-shrink-0">
             <button
-              onClick={handleBuyNow}
+              onClick={() => handleBuyNow(navigate)}
               className="bg-gradient-to-r from-purple-600/95 via-pink-600/95 to-purple-700/95 backdrop-blur-3xl border border-purple-300/40 shadow-2xl hover:shadow-[0_12px_35px_rgba(147,_51,_234,_0.7)] text-white font-bold px-3 sm:px-4 md:px-6 rounded-lg sm:rounded-xl text-sm sm:text-base transition-all duration-300 flex items-center justify-center space-x-1 sm:space-x-2 hover:scale-105 hover:border-purple-200/60 tracking-wide relative overflow-hidden whitespace-nowrap h-[60px] sm:h-[70px]"
             >
               <span className="text-sm sm:text-base">👍</span>

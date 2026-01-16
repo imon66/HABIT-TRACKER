@@ -54,7 +54,7 @@ export const handleDownload = () => {
   window.open(WEBSITE_CONFIG.DOWNLOAD_URL, '_blank');
 };
 
-export const handleCheckout = () => {
+export const handleCheckout = (navigate?: (path: string) => void) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'begin_checkout', {
       event_category: 'ecommerce',
@@ -63,10 +63,14 @@ export const handleCheckout = () => {
       currency: RAZORPAY_CONFIG.CURRENCY
     });
   }
-  window.location.href = '/checkout';
+  if (navigate) {
+    navigate('/checkout');
+  } else {
+    window.location.href = '/checkout';
+  }
 };
 
-export const handleBuyNow = handleCheckout;
+export const handleBuyNow = (navigate?: (path: string) => void) => handleCheckout(navigate);
 
 export const generateOrderId = (): string => {
   const timestamp = Date.now();

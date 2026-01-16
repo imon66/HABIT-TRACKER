@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { WEBSITE_CONFIG } from '../config/constants';
 import type { OrderInfo } from '../config/constants';
 import { clearOrderData } from '../services/razorpayService';
 
 const SuccessPage = () => {
+  const navigate = useNavigate();
   const [orderInfo, setOrderInfo] = useState<OrderInfo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +35,7 @@ const SuccessPage = () => {
 
   const handleBackToHome = () => {
     clearOrderData();
-    window.location.href = '/';
+    navigate('/');
   };
 
   if (isLoading) {

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
 const CheckoutPage = () => {
@@ -29,12 +30,12 @@ const CheckoutPage = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-2xl">
           <div className="text-center mb-8">
-            <a href="/" className="inline-flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 group">
+            <Link to="/" className="inline-flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 group">
               <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="text-sm font-medium">Back to Home</span>
-            </a>
+            </Link>
           </div>
 
           <CheckoutForm />
