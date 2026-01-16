@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { WEBSITE_CONFIG, handleBuyNow } from '../config/constants'
+import { WEBSITE_CONFIG, handleDownload } from '../config/constants'
 
 const PreviewSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -308,7 +308,7 @@ const HeroSection = () => {
             {/* CTA Button - Fixed Width with Heartbeat Animation */}
             <div className="flex justify-center lg:justify-start">
               <button
-                onClick={handleBuyNow}
+                onClick={handleDownload}
                 className="w-full max-w-md bg-gradient-to-r from-purple-900 via-purple-700 to-white hover:from-purple-800 hover:via-purple-600 hover:to-gray-100 backdrop-blur-3xl border-2 border-white/60 shadow-2xl hover:shadow-[0_35px_80px_rgba(88,_28,_135,_0.8)] text-white font-bold text-base md:text-lg px-6 md:px-8 py-4 md:py-5 rounded-3xl transform hover:scale-105 transition-all duration-500 flex items-center justify-center space-x-3 hover:border-purple-300/80 relative overflow-hidden group animate-heartbeat"
               >
                 <span>🚀</span>
