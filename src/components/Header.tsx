@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { handleDownload, WEBSITE_CONFIG } from '../config/constants'
+import { handleBuyNow, WEBSITE_CONFIG } from '../config/constants'
 
 const Header = () => {
   const [timerVisible, setTimerVisible] = useState(true)
@@ -46,7 +46,7 @@ const Header = () => {
           {/* Right side - Buy Now button */}
           <div>
             <button
-              onClick={handleDownload}
+              onClick={handleBuyNow}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full text-sm transition-all duration-200 whitespace-nowrap hover:scale-105 shadow-md hover:shadow-lg"
             >
               Buy Now ₹49
